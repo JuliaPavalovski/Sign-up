@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f1f1f1;
+}
+
+.wrapper {
+    width: 700px; /* Увеличиваем ширину формы для соответствия образцу */
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%; /* Поля занимают всю ширину */
+    padding: 18px; /* Увеличиваем внутренние отступы для высоты */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #007bff; /* Стандартная синяя обводка при фокусе для всех полей */
+    outline: none;
+}
+
+/* Валидация только для поля Username */
+#username:invalid {
+    border-color: red; /* Красная обводка при невалидности для Username */
+}
+
+#username:invalid:focus {
+    border: 2px solid red; /* Толстая красная обводка при фокусе на невалидном поле */
+}
+
+/* Сообщение об ошибке для Username */
+#username:invalid:focus:after {
+    content: 'Field is required'; /* Сообщение об ошибке */
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    position: absolute;
+    left: 15px;
+}
+
+/* Убираем красную обводку для других полей, если они невалидны */
+.input-box input:invalid {
+    border-color: #ccc;
+}
+
+#username:invalid {
+    border-color: red !important; /* Применяем красную обводку только к Username */
+}
+
+button {
+    width: 100%; /* Кнопка занимает всю ширину */
+    padding: 10px; /* Увеличиваем высоту кнопки */
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 15px; /* Немного увеличиваем размер шрифта */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
