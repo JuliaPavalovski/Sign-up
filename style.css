@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+    font-family: 'Roboto', sans-serif; 
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-    width: 700px; /* Увеличиваем ширину формы для соответствия образцу */
+    width: 700px; 
     background: #fff;
     padding: 40px;
     border-radius: 10px;
@@ -37,8 +37,8 @@ h1 {
 }
 
 .input-box input {
-    width: 100%; /* Поля занимают всю ширину */
-    padding: 18px; /* Увеличиваем внутренние отступы для высоты */
+    width: 100%; 
+    padding: 18px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -47,22 +47,22 @@ h1 {
 }
 
 .input-box input:focus {
-    border-color: #007bff; /* Стандартная синяя обводка при фокусе для всех полей */
+    border-color: #007bff; 
     outline: none;
 }
 
-/* Валидация только для поля Username */
+
 #username:invalid {
-    border-color: red; /* Красная обводка при невалидности для Username */
+    border-color: red; 
 }
 
 #username:invalid:focus {
-    border: 2px solid red; /* Толстая красная обводка при фокусе на невалидном поле */
+    border: 2px solid red; 
 }
 
-/* Сообщение об ошибке для Username */
+
 #username:invalid:focus:after {
-    content: 'Field is required'; /* Сообщение об ошибке */
+    content: 'Field is required'; 
     display: block;
     color: red;
     font-size: 12px;
@@ -71,7 +71,7 @@ h1 {
     left: 15px;
 }
 
-/* Убираем красную обводку для других полей, если они невалидны */
+
 .input-box input:invalid {
     border-color: #ccc;
 }
